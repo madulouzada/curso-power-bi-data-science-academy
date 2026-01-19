@@ -1,0 +1,182 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "8904feba0cd9e8d090b0",
+  "position": {
+    "x": 665.69343065693431,
+    "y": 420.43795620437959,
+    "z": 5000,
+    "height": 295.18248175182481,
+    "width": 593.86861313868621
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Pedidos"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Data Pedido"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Ano"
+                }
+              },
+              "queryRef": "Pedidos.Data Pedido.Variation.Hierarquia de datas.Ano",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Pedidos"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Data Pedido"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Trimestre"
+                }
+              },
+              "queryRef": "Pedidos.Data Pedido.Variation.Hierarquia de datas.Trimestre",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Pedidos"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Data Pedido"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Mês"
+                }
+              },
+              "queryRef": "Pedidos.Data Pedido.Variation.Hierarquia de datas.Mês",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Pedidos"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Data Pedido"
+                        }
+                      },
+                      "Hierarchy": "Hierarquia de datas"
+                    }
+                  },
+                  "Level": "Dia"
+                }
+              },
+              "queryRef": "Pedidos.Data Pedido.Variation.Hierarquia de datas.Dia",
+              "active": false
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Vendas"
+                        }
+                      },
+                      "Property": "MargemLucro"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Vendas.MargemLucro)"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "valueAxis": [
+        {
+          "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Margem de Lucro'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Comportamento da Margem de Lucro ao longo do Tempo'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

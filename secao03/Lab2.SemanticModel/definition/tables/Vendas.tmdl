@@ -1,0 +1,84 @@
+table Vendas
+	lineageTag: d1533b6c-725e-470a-9f5b-fd056b02a896
+
+	column Pedido
+		dataType: string
+		lineageTag: ee2deb20-bee3-42f3-bb76-42cb8936cc74
+		summarizeBy: none
+		sourceColumn: Pedido
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cliente
+		dataType: string
+		lineageTag: 1cabc596-7656-4462-81b3-fb792aee1fd6
+		summarizeBy: none
+		sourceColumn: Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column Produto
+		dataType: string
+		lineageTag: 495f6650-2490-47d2-9eb8-922808680af1
+		summarizeBy: none
+		sourceColumn: Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Valor Venda'
+		dataType: double
+		lineageTag: a187a3cc-ab3a-45bd-96db-1956827282f8
+		summarizeBy: sum
+		sourceColumn: Valor Venda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Quantidade Vendida'
+		dataType: int64
+		formatString: 0
+		lineageTag: 98deaf0f-b777-4c0c-a999-b4cd73228afc
+		summarizeBy: sum
+		sourceColumn: Quantidade Vendida
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Custo Envio'
+		dataType: double
+		lineageTag: a251f048-c7b1-46fd-b794-4b900ef041fd
+		summarizeBy: sum
+		sourceColumn: Custo Envio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Lucro = Vendas[Valor Venda] - Vendas[Custo Envio]
+		lineageTag: 084e707b-7c3b-44dc-b2ae-07c8b6d04234
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MargemLucro = ROUND(DIVIDE(Vendas[Lucro],Vendas[Valor Venda]) * 100, 2)
+		lineageTag: 9ab49984-b0ff-41ba-91ba-19f223023e97
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Vendas-1f557b6c-ec5b-4366-82d5-8cbe61494e71 = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\Users\danie\OneDrive\Documents\PowerBIDSA\Cap03\Vendas.csv"),[Delimiter=";", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"Pedido", type text}, {"Cliente", type text}, {"Produto", type text}, {"Valor Venda", type number}, {"Quantidade Vendida", Int64.Type}, {"Custo Envio", type number}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_ResultType = Table
+
