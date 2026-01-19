@@ -1,0 +1,5 @@
+relationship 3370b402-0bb4-4968-a1d9-61aa9a29d65e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dataset.Data_Pedido
+	toColumn: LocalDateTable_7aff0774-ff3f-4000-85e6-4744fab2780f.Date
+
