@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "6f1910eb080b2d7e1713",
+  "displayName": "Visão Pontos de Vendas",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "8117fa6f4214307db2d4",
+  "displayName": "Visão Cliente",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280
+}
