@@ -1,0 +1,144 @@
+table Vendas
+	lineageTag: d1bd5277-585e-4f5e-8f5e-f591411fad2e
+
+	column ID-Produto
+		dataType: string
+		lineageTag: aae549a9-1e09-418b-8e9b-2062df73b307
+		summarizeBy: none
+		sourceColumn: ID-Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Produto
+		dataType: string
+		lineageTag: 6b363f5b-63fd-4961-be8a-40a39f013c9e
+		summarizeBy: none
+		sourceColumn: Produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column Categoria
+		dataType: string
+		lineageTag: 5d0a926b-bf59-4f61-9010-9af9f2d85ff0
+		summarizeBy: none
+		sourceColumn: Categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segmento
+		dataType: string
+		lineageTag: edf9979c-951c-4168-a4fc-ab11e0ea7ac6
+		summarizeBy: none
+		sourceColumn: Segmento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fabricantes
+		dataType: string
+		lineageTag: 56146efc-e78c-4856-8f65-f7f361c4c88b
+		summarizeBy: none
+		sourceColumn: Fabricantes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Loja
+		dataType: string
+		lineageTag: 36e3c6b3-45ed-4fb6-84e7-3996b2efa5a5
+		summarizeBy: none
+		sourceColumn: Loja
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cidade
+		dataType: string
+		lineageTag: cd37b335-1468-4a63-8996-aad927c177ab
+		summarizeBy: none
+		sourceColumn: Cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column Estado
+		dataType: string
+		lineageTag: 23b202eb-1bdb-4697-9865-bc2bbad77887
+		summarizeBy: none
+		sourceColumn: Estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendedor
+		dataType: string
+		lineageTag: 1b4d5f1e-2192-4dc3-a9c5-30d2f32a55db
+		summarizeBy: none
+		sourceColumn: Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID-Vendedor
+		dataType: int64
+		formatString: 0
+		lineageTag: 96783e02-951f-441c-bc51-6cb3261666e4
+		summarizeBy: sum
+		sourceColumn: ID-Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Comissão (Percentual)'
+		dataType: int64
+		formatString: 0
+		lineageTag: ddbde0e4-b4f4-4a09-91e9-7f01f36ba450
+		summarizeBy: sum
+		sourceColumn: Comissão (Percentual)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Venda'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 26a98ff0-8fef-4a0a-af0a-86b5be983618
+		summarizeBy: none
+		sourceColumn: Data Venda
+
+		variation Variation
+			isDefault
+			relationship: 2037f4ba-e985-403a-bc4c-7a70f3f55034
+			defaultHierarchy: LocalDateTable_7f34b07c-a8f1-493d-a92b-267784f16a58.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ValorVenda
+		dataType: double
+		lineageTag: 7dd438b3-ac5f-4ced-a79b-a1864796193f
+		summarizeBy: sum
+		sourceColumn: ValorVenda
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Custo
+		dataType: int64
+		formatString: 0
+		lineageTag: 309543e6-57c3-4354-ba43-c339c2607767
+		summarizeBy: sum
+		sourceColumn: Custo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Vendas = m
+		mode: import
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\Maria Eduarda\Desktop\curso-power-bi-data-science-academy\secao05\Dados_Comerciais.xlsx"), null, true),
+				    Vendas_Sheet = Fonte{[Item="Vendas",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Vendas_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"ID-Produto", type text}, {"Produto", type text}, {"Categoria", type text}, {"Segmento", type text}, {"Fabricante", type text}, {"Loja", type text}, {"Cidade", type text}, {"Estado", type text}, {"Vendedor", type text}, {"ID-Vendedor", Int64.Type}, {"Comissão (Percentual)", Int64.Type}, {"Data Venda", type date}, {"ValorVenda", type number}, {"Custo", Int64.Type}}),
+				    #"Colunas Renomeadas" = Table.RenameColumns(#"Tipo Alterado",{{"Fabricante", "Fabricantes"}})
+				in
+				    #"Colunas Renomeadas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
