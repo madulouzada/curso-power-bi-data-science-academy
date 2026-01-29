@@ -1,0 +1,67 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "2fd76598cfa12d88a7a7",
+  "position": {
+    "x": 71.824817518248182,
+    "y": 280.29197080291971,
+    "z": 6000,
+    "height": 110.36496350364965,
+    "width": 188.3211678832117,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DatasetRH"
+                        }
+                      },
+                      "Property": "Anos_Experiencia"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(DatasetRH.Anos_Experiencia)",
+              "nativeQueryRef": "Experiência Média (Anos)",
+              "displayName": "Experiência Média (Anos)"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "DatasetRH"
+                      }
+                    },
+                    "Property": "Anos_Experiencia"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

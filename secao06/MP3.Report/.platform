@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "MP3"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f1fefe88-f921-43ac-966e-a1bc15271021"
+  }
+}

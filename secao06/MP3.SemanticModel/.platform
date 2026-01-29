@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "MP3"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "eb3b63b2-60ff-4a34-9f46-04931980333d"
+  }
+}
