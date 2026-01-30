@@ -1,0 +1,23 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Logistica","Medida"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Logistica
+ref table DateTableTemplate_57de9b5c-0719-4990-b322-e6e01092e42a
+ref table LocalDateTable_8574b2f3-f57d-492a-a114-fc7ceefa1b60
+ref table LocalDateTable_a1ae5211-3306-4b7f-b818-abc1b481c8be
+ref table LocalDateTable_2d10e86d-4098-4a95-a8ed-6f093d47f1d4
+ref table Medida
+
+ref cultureInfo pt-BR
+

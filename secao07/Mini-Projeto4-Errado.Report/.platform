@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Mini-Projeto4-Errado"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "372b756a-c632-4454-8b59-787bb45a57b1"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Mini-Projeto4-Correcao"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "548ade14-877c-414f-9a8b-f44dff902f32"
+  }
+}
