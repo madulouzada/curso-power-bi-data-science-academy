@@ -1,0 +1,190 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"dados_pacientes\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "pt-BR",
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "pt-BR",
+    "tables": [
+      {
+        "name": "dados_pacientes",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "id_paciente",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4d768b65-259e-4eee-9ebf-23a1a2a8ae36",
+            "sourceColumn": "id_paciente",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "idade(anos)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bf5c8310-a040-4751-9a10-0b12c6e3bd24",
+            "sourceColumn": "idade(anos)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "altura(cm)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "17141e06-7960-4e5d-9b55-de3c8bb9f4e6",
+            "sourceColumn": "altura(cm)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "peso(kg)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c07da832-8485-4aeb-ab8f-de2837b1ec0e",
+            "sourceColumn": "peso(kg)",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "tipo_sanguineo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "abea3f70-ec41-4597-8413-9408982a8007",
+            "sourceColumn": "tipo_sanguineo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "estado_civil",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4dcaaaeb-1d26-4ed0-b7aa-66a3f2b19541",
+            "sourceColumn": "estado_civil",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "c6cdcbf2-ddbf-4f86-9ef6-d7e86fd5620c",
+        "measures": [
+          {
+            "name": "CVPeso",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "DIVIDE(STDEV.P(dados_pacientes[peso(kg)]), AVERAGE(dados_pacientes[peso(kg)])) * 100",
+            "lineageTag": "227d2e6f-c2d0-44a7-8420-25168cced547"
+          },
+          {
+            "name": "CVAltura",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "DIVIDE(STDEV.P(dados_pacientes[altura(cm)]), AVERAGE(dados_pacientes[altura(cm)])) * 100",
+            "lineageTag": "3ec265cb-10aa-46c9-9a59-2b76f932c5c0"
+          },
+          {
+            "name": "CVIdade",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "DIVIDE(STDEV.P(dados_pacientes[idade(anos)]), AVERAGE(dados_pacientes[idade(anos)])) * 100",
+            "lineageTag": "f49e1ab1-1214-4db0-8670-25554d0040f0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "dados_pacientes",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"C:\\Users\\ti3\\Desktop\\curso-power-bi-data-science-academy\\secao12\\dados_pacientes.csv\"),[Delimiter=\",\", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"id_paciente\", Int64.Type}, {\"idade(anos)\", Int64.Type}, {\"altura(cm)\", Int64.Type}, {\"peso(kg)\", Int64.Type}, {\"tipo_sanguineo\", type text}, {\"estado_civil\", type text}})",
+                "in",
+                "    #\"Tipo Alterado\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

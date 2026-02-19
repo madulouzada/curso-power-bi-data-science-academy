@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.61\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "175762bfe98cfecc1492",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"a8f740751fbe50cc49f2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":63.22188449848024,\"y\":22.37082066869301,\"z\":0,\"width\":576.7781155015198,\"height\":81.70212765957447,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(dados_pacientes.idade(anos))\"},{\"queryRef\":\"Sum(dados_pacientes.idade(anos))1\"},{\"queryRef\":\"Sum(dados_pacientes.idade(anos))2\"},{\"queryRef\":\"dados_pacientes.CVIdade\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"idade(anos)\"}},\"Function\":1},\"Name\":\"Sum(dados_pacientes.idade(anos))\",\"NativeReferenceName\":\"Média de idade(anos)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"idade(anos)\"}},\"Function\":8},\"Name\":\"Sum(dados_pacientes.idade(anos))1\",\"NativeReferenceName\":\"Variação de idade(anos)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"idade(anos)\"}},\"Function\":7},\"Name\":\"Sum(dados_pacientes.idade(anos))2\",\"NativeReferenceName\":\"Desvio padrão de idade(anos)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CVIdade\"},\"Name\":\"dados_pacientes.CVIdade\",\"NativeReferenceName\":\"CVIdade\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 81.70,
+          "width": 576.78,
+          "x": 63.22,
+          "y": 22.37,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"d5b2b88dcc2378ef3cdb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":63.22188449848024,\"y\":281.09422492401217,\"z\":1000,\"width\":609.8480243161094,\"height\":71.00303951367782,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(dados_pacientes.altura(cm))\"},{\"queryRef\":\"Sum(dados_pacientes.altura(cm))1\"},{\"queryRef\":\"Sum(dados_pacientes.altura(cm))2\"},{\"queryRef\":\"dados_pacientes.CVAltura\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"altura(cm)\"}},\"Function\":1},\"Name\":\"Sum(dados_pacientes.altura(cm))\",\"NativeReferenceName\":\"Média de altura(cm)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"altura(cm)\"}},\"Function\":8},\"Name\":\"Sum(dados_pacientes.altura(cm))1\",\"NativeReferenceName\":\"Variação de altura(cm)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"altura(cm)\"}},\"Function\":7},\"Name\":\"Sum(dados_pacientes.altura(cm))2\",\"NativeReferenceName\":\"Desvio padrão de altura(cm)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CVAltura\"},\"Name\":\"dados_pacientes.CVAltura\",\"NativeReferenceName\":\"CVAltura\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 71.00,
+          "width": 609.85,
+          "x": 63.22,
+          "y": 281.09,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"f3a728ff5d58dc7efe2e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":63.22188449848024,\"y\":164.37689969604864,\"z\":2000,\"width\":609.8480243161094,\"height\":88.51063829787235,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(dados_pacientes.peso(kg))\"},{\"queryRef\":\"Sum(dados_pacientes.peso(kg))1\"},{\"queryRef\":\"Sum(dados_pacientes.peso(kg))2\"},{\"queryRef\":\"dados_pacientes.CVPeso\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"dados_pacientes\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"peso(kg)\"}},\"Function\":1},\"Name\":\"Sum(dados_pacientes.peso(kg))\",\"NativeReferenceName\":\"Média de peso(kg)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"peso(kg)\"}},\"Function\":8},\"Name\":\"Sum(dados_pacientes.peso(kg))1\",\"NativeReferenceName\":\"Variação de peso(kg)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"peso(kg)\"}},\"Function\":7},\"Name\":\"Sum(dados_pacientes.peso(kg))2\",\"NativeReferenceName\":\"Desvio padrão de peso(kg)\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"CVPeso\"},\"Name\":\"dados_pacientes.CVPeso\",\"NativeReferenceName\":\"CVPeso\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"values\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 88.51,
+          "width": 609.85,
+          "x": 63.22,
+          "y": 164.38,
+          "z": 2000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
