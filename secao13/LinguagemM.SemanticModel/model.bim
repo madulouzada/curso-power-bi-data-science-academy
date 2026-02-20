@@ -1,0 +1,265 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Clientes\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "pt-BR",
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "pt-BR",
+    "tables": [
+      {
+        "name": "Clientes",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navegação"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Idade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "28be709c-7bc3-4a9b-93ea-ffb8b34fcf23",
+            "sourceColumn": "Idade",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Peso",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c2f575fc-2237-495d-b68e-d1b1c91217e0",
+            "sourceColumn": "Peso",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Altura",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3be13aee-75f1-457f-8030-5313872072de",
+            "sourceColumn": "Altura",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Estado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2b6dc2c8-ea7c-4432-9102-29e5396ab777",
+            "sourceColumn": "Estado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Limite de Credito",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "0",
+            "lineageTag": "9cd3a717-6ad2-4991-a44f-5d6524b72068",
+            "sourceColumn": "Limite de Credito",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Valor Desconto",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "01aa5a18-60c1-4f06-bc95-9f5618528021",
+            "sourceColumn": "Valor Desconto",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Valor Compra",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "5bf56418-8621-40f8-8633-149a7b88a815",
+            "sourceColumn": "Valor Compra",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Tipo de Cliente",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "30bb6682-2067-490d-8c18-bbf27e6c6142",
+            "sourceColumn": "Tipo de Cliente",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Valor Final",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9110255a-6583-436c-a76b-23a10d8d3860",
+            "sourceColumn": "Valor Final",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Codigo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "173a4859-cf47-450b-b484-68f16a85b963",
+            "sourceColumn": "Codigo",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "69d92cf9-1d77-44cf-b827-6a6e0c9c38e0",
+            "sourceColumn": "ID",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "% Desconto Especial",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bdf25d24-b428-410d-8eca-a63042f64442",
+            "sourceColumn": "% Desconto Especial",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "101f17c7-2bd7-4ecb-bef8-843720f93d51",
+        "partitions": [
+          {
+            "name": "Clientes",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Csv.Document(File.Contents(\"C:\\Users\\ti3\\Desktop\\curso-power-bi-data-science-academy\\secao13\\Clientes.csv\"),[Delimiter=\",\", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
+                "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"ID_Cliente\", type text}, {\"Idade\", type text}, {\"Peso\", Int64.Type}, {\"Altura\", Int64.Type}, {\"Estado Civil\", type text}, {\"Estado\", type text}, {\"Limite de Credito\", Int64.Type}, {\"Valor Desconto\", Int64.Type}, {\"Valor Compra\", Int64.Type}, {\"Tipo de Cliente\", type text}}),",
+                "",
+                "    //Substituindo valor",
+                "    #\"Valor Substituido\" = Table.ReplaceValue(#\"Tipo Alterado\", \"?\", \"45\",Replacer.ReplaceText,{\"Idade\"}),",
+                "",
+                "    //Ajustando o tipo de variavel",
+                "    #\"Tipo ajustado\" = Table.TransformColumnTypes(#\"Valor Substituido\",{{\"Idade\", Int64.Type}}),",
+                "",
+                "    //Removendo coluna",
+                "    #\"Coluna Removida\" = Table.RemoveColumns(#\"Tipo ajustado\",{\"Estado Civil\"}),",
+                "",
+                "    //Adicionando coluna",
+                "    #\"Coluna Adicionada\" = Table.AddColumn(#\"Coluna Removida\", \"Valor Final\", each [Valor Compra] - [Valor Desconto]),",
+                "",
+                "    //Dividindo Coluna",
+                "    #\"Dividir Coluna pela Posição\" = Table.SplitColumn(#\"Coluna Adicionada\", \"ID_Cliente\", Splitter.SplitTextByPositions({0, 4}, false ), {\"ID_Cliente.1\", \"ID_Cliente.2\"}),",
+                "    #\"Coluna Dividida\" = Table.TransformColumnTypes(#\"Dividir Coluna pela Posição\",{{\"ID_Cliente.1\", type text},{\"ID_Cliente.2\", Int64.Type}}) ,",
+                "",
+                "    //Ajustando nome de coluna",
+                "    #\"Colunas Renomeadas\" = Table.RenameColumns(#\"Coluna Dividida\", {{\"ID_Cliente.1\", \"Codigo\"}, {\"ID_Cliente.2\", \"ID\"}}),",
+                "",
+                "    //Coluna Condicional",
+                "    #\"Coluna condicional Adicionada\" = Table.AddColumn(#\"Colunas Renomeadas\", \"% Desconto Especial\", each if [Tipo de Cliente] = \"Bronze\" then 5 else if [Tipo de Cliente] = \"Prata\" then 10 else if [Tipo de Cliente] = \"Ouro\" then 15 else if [Tipo de Cliente] = \"Diamante\" then 20 else 0),",
+                "",
+                "    //Ajustando a escala dos dados com trasnformações Logarítmica",
+                "    #\"Logaritmo de Base 10 Calculado\" = Table.TransformColumns(#\"Coluna condicional Adicionada\", {{\"Limite de Credito\", Number.Log10, type number}})",
+                "in",
+                "    #\"Logaritmo de Base 10 Calculado\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
