@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Banco de Dados"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4b5830d7-6fb4-49f8-a1df-807ae22c7203"
+  }
+}

@@ -1,0 +1,599 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"TB_DSA_CLIENTES\",\"TB_DSA_PRODUTOS\",\"TB_DSA_PEDIDOS\",\"TB_DSA_VENDAS\",\"TB_DSA_CLIENTES2\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "pt-BR",
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "AutoDetected_bde69f1b-f9f2-41d0-8d42-d45f516ded6d",
+        "fromColumn": "Cliente",
+        "fromTable": "TB_DSA_VENDAS",
+        "toColumn": "ID_Cliente",
+        "toTable": "TB_DSA_CLIENTES"
+      },
+      {
+        "name": "AutoDetected_ae2bc8c5-4e8d-4692-a5aa-9da1ef79578c",
+        "fromColumn": "Produto",
+        "fromTable": "TB_DSA_VENDAS",
+        "toColumn": "ID_Produto",
+        "toTable": "TB_DSA_PRODUTOS"
+      },
+      {
+        "name": "AutoDetected_5fe44e57-f3db-458d-b8e2-33e1a80b25f8",
+        "fromColumn": "Pedido",
+        "fromTable": "TB_DSA_VENDAS",
+        "toColumn": "ID_Pedido",
+        "toTable": "TB_DSA_PEDIDOS"
+      },
+      {
+        "name": "AutoDetected_9c32a029-56ab-4020-b06b-c33fa24a3070",
+        "crossFilteringBehavior": "bothDirections",
+        "fromCardinality": "one",
+        "fromColumn": "ID_Cliente",
+        "fromTable": "TB_DSA_CLIENTES2",
+        "toColumn": "ID_Cliente",
+        "toTable": "TB_DSA_CLIENTES"
+      }
+    ],
+    "sourceQueryCulture": "pt-BR",
+    "tables": [
+      {
+        "name": "TB_DSA_CLIENTES",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID_Cliente",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "27c8e36c-7c5c-46d1-81b4-a2d4dcc69638",
+            "sourceColumn": "ID_Cliente",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nome_Cliente",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8ab3b97c-a364-41f6-b2ac-e4be849aff5d",
+            "sourceColumn": "Nome_Cliente",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d290c78e-952f-4252-a9d3-f728be1ddb54",
+            "sourceColumn": "Cidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Estado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b9236abb-473e-4d31-b3eb-7f86f7125eb1",
+            "sourceColumn": "Estado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pais",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f71cf374-d56b-45a7-a7d7-03e6d7bf7327",
+            "sourceColumn": "Pais",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Regiao",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4bd49568-c992-407f-aa22-2e8e7d101931",
+            "sourceColumn": "Regiao",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Mercado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fdefa054-7ab0-4f3c-9604-4a8c69cfc7cd",
+            "sourceColumn": "Mercado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Segmento",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d1ad7055-1a91-461c-9f35-144fcccbff73",
+            "sourceColumn": "Segmento",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "038578dd-349a-4359-a106-9ea0f64212e3",
+        "partitions": [
+          {
+            "name": "TB_DSA_CLIENTES",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Odbc.DataSource(\"dsn=db_dsa\", [HierarchicalNavigation=true]),",
+                "    main_Database = Fonte{[Name=\"main\",Kind=\"Database\"]}[Data],",
+                "    TB_DSA_CLIENTES_Table = main_Database{[Name=\"TB_DSA_CLIENTES\",Kind=\"Table\"]}[Data]",
+                "in",
+                "    TB_DSA_CLIENTES_Table"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TB_DSA_PRODUTOS",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID_Produto",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d99a7a95-8a0c-47cc-8f50-a5862ccfb22a",
+            "sourceColumn": "ID_Produto",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Nome_Produto",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7599e8f7-1c53-4ef3-9373-62ac3493739f",
+            "sourceColumn": "Nome_Produto",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Categoria",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "dd0da8d6-ce3a-441c-a29c-2106db202bc0",
+            "sourceColumn": "Categoria",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "SubCategoria",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "46b085cb-61a3-4fe4-8c6a-162db5d9e489",
+            "sourceColumn": "SubCategoria",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "a81783c1-7bef-49be-9747-732e98d1d0b8",
+        "partitions": [
+          {
+            "name": "TB_DSA_PRODUTOS",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Odbc.DataSource(\"dsn=db_dsa\", [HierarchicalNavigation=true]),",
+                "    main_Database = Fonte{[Name=\"main\",Kind=\"Database\"]}[Data],",
+                "    TB_DSA_PRODUTOS_Table = main_Database{[Name=\"TB_DSA_PRODUTOS\",Kind=\"Table\"]}[Data]",
+                "in",
+                "    TB_DSA_PRODUTOS_Table"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TB_DSA_PEDIDOS",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID_Pedido",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9e123634-6ff3-4688-9016-7d356c07a9cb",
+            "sourceColumn": "ID_Pedido",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "d1350968-aa13-4add-af28-94425da6371e",
+            "sourceColumn": "Ano",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Mes",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "98a499f4-b8b3-450a-923e-30fa32fc42d2",
+            "sourceColumn": "Mes",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Dia",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "985f8607-85eb-471e-875e-ca926fcaf293",
+            "sourceColumn": "Dia",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Modo_Envio",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fee96bc2-a9e3-45af-90b9-d982a6303afb",
+            "sourceColumn": "Modo_Envio",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Prioridade_Pedido",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fd5675dc-6a72-4c2a-bfaa-96d26f5bf1ce",
+            "sourceColumn": "Prioridade_Pedido",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "7ebafe06-8bb4-47d2-8d2f-ac86840d40e9",
+        "partitions": [
+          {
+            "name": "TB_DSA_PEDIDOS",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Odbc.DataSource(\"dsn=db_dsa\", [HierarchicalNavigation=true]),",
+                "    main_Database = Fonte{[Name=\"main\",Kind=\"Database\"]}[Data],",
+                "    TB_DSA_PEDIDOS_Table = main_Database{[Name=\"TB_DSA_PEDIDOS\",Kind=\"Table\"]}[Data]",
+                "in",
+                "    TB_DSA_PEDIDOS_Table"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TB_DSA_VENDAS",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Pedido",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "43c43bc7-9e2b-4512-829a-cb7a879d13cc",
+            "sourceColumn": "Pedido",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Produto",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "61e359fd-6742-44f9-8de6-5d700705572c",
+            "sourceColumn": "Produto",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cliente",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4f023a99-9d99-4d49-9caa-2c927c677b7c",
+            "sourceColumn": "Cliente",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Quantidade_Vendida",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "cbba5eda-b8c7-4506-bbea-75f84e9e6f68",
+            "sourceColumn": "Quantidade_Vendida",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Valor_Venda",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ec72477c-2924-4719-9ee1-a675e39983ba",
+            "sourceColumn": "Valor_Venda",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Custo_Envio",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "243ced1b-5e45-402f-b599-fa42d3605535",
+            "sourceColumn": "Custo_Envio",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "5edbe38c-79d3-4fdd-9b7e-8c2e58b74fa6",
+        "partitions": [
+          {
+            "name": "TB_DSA_VENDAS",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Odbc.DataSource(\"dsn=db_dsa\", [HierarchicalNavigation=true]),",
+                "    main_Database = Fonte{[Name=\"main\",Kind=\"Database\"]}[Data],",
+                "    TB_DSA_VENDAS_Table = main_Database{[Name=\"TB_DSA_VENDAS\",Kind=\"Table\"]}[Data]",
+                "in",
+                "    TB_DSA_VENDAS_Table"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TB_DSA_CLIENTES2",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "Name"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ID_Cliente",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "54bd5d2f-d3ae-4928-943c-436e35aee0d5",
+            "sourceColumn": "ID_Cliente",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cidade",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f6fa828e-608a-47ed-8347-116a2662b1b1",
+            "sourceColumn": "Cidade",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Estado",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c6e0919f-5209-49e3-8045-2ed8cab7715d",
+            "sourceColumn": "Estado",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Pais",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ab1d455c-0acf-4ef8-a441-0cc166452a49",
+            "sourceColumn": "Pais",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "1f524218-4345-4200-8c64-e96f0ad0ec14",
+        "partitions": [
+          {
+            "name": "TB_DSA_CLIENTES2",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Odbc.Query(\"dsn=db_dsa\", \"SELECT id_cliente, cidade, estado,pais#(lf)FROM TB_DSA_CLIENTES\")",
+                "in",
+                "    Fonte"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

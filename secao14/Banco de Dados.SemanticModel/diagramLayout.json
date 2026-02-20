@@ -1,0 +1,86 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 413.28676847827353,
+            "y": 306.54791015902424
+          },
+          "nodeIndex": "TB_DSA_CLIENTES",
+          "nodeLineageTag": "038578dd-349a-4359-a106-9ea0f64212e3",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 654.733185782402,
+            "y": 0
+          },
+          "nodeIndex": "TB_DSA_PEDIDOS",
+          "nodeLineageTag": "7ebafe06-8bb4-47d2-8d2f-ac86840d40e9",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 10.000000000000057,
+            "y": 347.89786915017004
+          },
+          "nodeIndex": "TB_DSA_PRODUTOS",
+          "nodeLineageTag": "a81783c1-7bef-49be-9747-732e98d1d0b8",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 172.87800430840309,
+            "y": 0
+          },
+          "nodeIndex": "TB_DSA_VENDAS",
+          "nodeLineageTag": "5edbe38c-79d3-4fdd-9b7e-8c2e58b74fa6",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 928.733185782402,
+            "y": 201.27395507951212
+          },
+          "nodeIndex": "TB_DSA_CLIENTES2",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

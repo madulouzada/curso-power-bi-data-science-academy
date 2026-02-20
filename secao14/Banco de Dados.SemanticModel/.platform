@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Banco de Dados"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "a9b9cf49-b49a-498b-981c-fa737f7d237c"
+  }
+}
