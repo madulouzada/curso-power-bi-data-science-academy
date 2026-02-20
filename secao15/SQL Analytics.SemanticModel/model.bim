@@ -1,0 +1,185 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"ReportVendas\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.139.1678.0 (24.12)+2a034ab280bddf891eb7bb9ebfe6996f9c3a3196"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "pt-BR",
+    "cultures": [
+      {
+        "name": "pt-BR",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "pt-BR",
+    "tables": [
+      {
+        "name": "ReportVendas",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "Name"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Nome_Produto",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a6d4df67-a1f6-460a-9023-276c257e12e3",
+            "sourceColumn": "Nome_Produto",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Valor_Minimo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "f4bfcaf6-8400-42bf-9c8b-a55c3cceb1b4",
+            "sourceColumn": "Valor_Minimo",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Valor_Maximo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "875b3196-0c09-471c-a13c-b9b4ca2b91c0",
+            "sourceColumn": "Valor_Maximo",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Valor_Medio",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "d2be2ccf-6726-4b26-8fe6-7c89d85f0a63",
+            "sourceColumn": "Valor_Medio",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Valor_Total",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "ec795500-3ef2-4781-9f6f-aa082a29ba30",
+            "sourceColumn": "Valor_Total",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Contagem",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a9dd691b-b3a0-4681-b84c-57a5362f3d4f",
+            "sourceColumn": "Contagem",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4b3535a4-8bd2-4e1e-a935-ae8e62a9bc41",
+            "sourceColumn": "Ano",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "2af965f3-f9f2-406d-9b7b-9a6848cfe6d8",
+        "partitions": [
+          {
+            "name": "ReportVendas",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Fonte = Odbc.Query(\"dsn=db_dsa\", \"SELECT Nome_Produto,#(lf)       ROUND(MIN(Valor_Venda), 2) AS Valor_Minimo,#(lf)       ROUND(MAX(Valor_Venda), 2) AS Valor_Maximo,#(lf)       ROUND(AVG(Valor_Venda), 2) AS Valor_Medio,#(lf)       ROUND(SUM(Valor_Venda), 2) AS Valor_Total,#(lf)       COUNT(Valor_Venda) AS Contagem,#(lf)       Ano#(lf)FROM TB_DSA_VENDAS, TB_DSA_PRODUTOS, TB_DSA_PEDIDOS#(lf)WHERE TB_DSA_VENDAS.Produto = TB_DSA_PRODUTOS.ID_Produto#(lf)  AND TB_DSA_VENDAS.Pedido = TB_DSA_PEDIDOS.ID_Pedido#(lf)GROUP BY Produto, Ano#(lf)ORDER BY Contagem DESC;\")",
+                "in",
+                "    Fonte"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
