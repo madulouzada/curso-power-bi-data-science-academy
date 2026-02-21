@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
+  "name": "4a63e9131e09444be0a6",
+  "position": {
+    "x": 12.224108658743633,
+    "y": 1.2224108658743633,
+    "z": 13000,
+    "height": 35.449915110356535,
+    "width": 345.94227504244481,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Data Science Academy - Lab 7",
+                    "textStyle": {
+                      "fontSize": "16pt",
+                      "color": "#03ef16"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

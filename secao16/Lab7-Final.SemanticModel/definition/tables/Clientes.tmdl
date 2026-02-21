@@ -1,0 +1,77 @@
+table Clientes
+	lineageTag: 99c9fc33-d922-4f1a-8b81-8a7ddbde65d3
+
+	measure 'Média de Idade' =
+			
+			ROUND (
+			    AVERAGE ( Clientes[Idade] ),
+			    0
+			)
+		lineageTag: 5fe6b105-a3e0-446c-a7a8-7728cf58a251
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column id
+		dataType: double
+		lineageTag: 55568f3d-1ff5-4d6b-b798-702e66eb10ed
+		summarizeBy: sum
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column idade
+		dataType: double
+		lineageTag: 2cf2304f-04aa-4da0-9edc-4f53e6be23e9
+		summarizeBy: sum
+		sourceColumn: idade
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column renda_anual
+		dataType: double
+		lineageTag: 6d16fc33-633d-4527-842e-9ab3bd692cb7
+		summarizeBy: sum
+		sourceColumn: renda_anual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pontuacao_gastos
+		dataType: double
+		lineageTag: 0f3e619c-65fc-4611-93bd-2cc7322629db
+		summarizeBy: sum
+		sourceColumn: pontuacao_gastos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column cluster
+		dataType: int64
+		formatString: 0
+		lineageTag: ef2ba673-b6f4-47d5-966f-871b5882caec
+		summarizeBy: sum
+		sourceColumn: cluster
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Clientes-d5a737c1-68cc-4934-b3e8-52dc088b24b6 = m
+		mode: import
+		source = ```
+				let
+				  Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("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", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"id" = _t, #"idade" = _t, #"renda_anual" = _t, #"pontuacao_gastos" = _t, #"cluster" = _t]),
+				  #"Changed column type" = Table.TransformColumnTypes(Source, {{"id", Number.Type}, {"idade", Number.Type}, {"renda_anual", Number.Type}, {"pontuacao_gastos", Number.Type}, {"cluster", Int32.Type}})
+				in
+				  #"Changed column type"
+				
+				```
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

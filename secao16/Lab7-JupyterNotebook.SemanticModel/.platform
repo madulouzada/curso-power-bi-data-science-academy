@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Lab7-JupyterNotebook"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "3933d1bc-5647-4a29-8482-79e513bba52d"
+  }
+}

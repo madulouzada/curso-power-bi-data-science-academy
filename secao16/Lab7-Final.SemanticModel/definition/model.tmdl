@@ -1,0 +1,21 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation ModelPopulated = value
+
+annotation PBI_QueryOrder = ["Clientes"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Clientes
+ref table DateTableTemplate_c2b4d33b-2f24-4e06-8d6f-cb2f7c259ad1
+
+ref cultureInfo en-US
+

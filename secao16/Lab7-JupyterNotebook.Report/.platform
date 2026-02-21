@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Lab7-JupyterNotebook"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2c3d7a7a-6866-4004-9153-787492055d0c"
+  }
+}
