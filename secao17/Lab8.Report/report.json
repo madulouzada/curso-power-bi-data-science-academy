@@ -1,0 +1,102 @@
+{
+  "config": "{\"version\":\"5.43\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY23SU04\",\"version\":\"5.43\",\"type\":2},\"customTheme\":{\"name\":\"AccessibleCityPark\",\"version\":\"5.43\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "AccessibleCityPark",
+            "path": "BuiltInThemes/AccessibleCityPark.json",
+            "type": 201
+          },
+          {
+            "name": "CY23SU04",
+            "path": "BaseThemes/CY23SU04.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Lab8",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "ReportSection",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0d18e06a29a18345a60d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1029.1525423728813,\"y\":116.61016949152541,\"z\":4000,\"width\":233.22033898305082,\"height\":109.83050847457626}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(previsoes_novos_dados.anomaly_score)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"previsoes_novos_dados\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"}},\"Function\":1},\"Name\":\"Sum(previsoes_novos_dados.anomaly_score)\",\"NativeReferenceName\":\"Média de anomaly_score\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"}},\"Function\":1}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Média do Score de Anomalia'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 109.83,
+          "width": 233.22,
+          "x": 1029.15,
+          "y": 116.61,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"0d583aa3b01212217439\",\"layouts\":[{\"id\":0,\"position\":{\"x\":66.63983903420524,\"y\":409.97987927565396,\"z\":1000,\"width\":586.7203219315895,\"height\":311.4688128772636}}],\"singleVisual\":{\"visualType\":\"scriptVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"previsoes_novos_dados.status\"},{\"queryRef\":\"previsoes_novos_dados.anomaly_score\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"previsoes_novos_dados\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"status\"},\"Name\":\"previsoes_novos_dados.status\",\"NativeReferenceName\":\"status\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"},\"Name\":\"previsoes_novos_dados.anomaly_score\",\"NativeReferenceName\":\"anomaly_score\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"script\":[{\"properties\":{\"source\":{\"expr\":{\"Literal\":{\"Value\":\"'# O código a seguir para criar um dataframe e remover as linhas duplicadas sempre é executado e age como um preâmbulo para o script: \\n\\n# dataset <- data.frame(status, anomaly_score)\\n# dataset <- unique(dataset)\\n\\n# Cole ou digite aqui seu código de script:\\n\\nlibrary(ggplot2)\\n\\n# Criando o box plot\\nggplot(dataset, aes(x = status, y = anomaly_score, fill = status)) +\\n  geom_boxplot() +\\n  labs(title = \\\"\\\",\\n       x = \\\"Status\\\",\\n       y = \\\"Anomaly Score\\\") +\\n  theme_minimal() +\\n  scale_fill_manual(values = c(\\\"anomalia\\\" = \\\"red\\\", \\\"normal\\\" = \\\"blue\\\")) +\\n  theme(legend.position = \\\"none\\\")'\"}}},\"provider\":{\"expr\":{\"Literal\":{\"Value\":\"'R'\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'BoxPlot do Score de Anomalia Por Status (Gráfico Criado com Linguagem R)'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 311.47,
+          "width": 586.72,
+          "x": 66.64,
+          "y": 409.98,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"22ee943fdedc1a0eea20\",\"layouts\":[{\"id\":0,\"position\":{\"x\":664.4067796610169,\"y\":409.4915254237288,\"z\":3000,\"width\":597.9661016949152,\"height\":310.50847457627117}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"previsoes_novos_dados.status\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(previsoes_novos_dados.anomaly_score)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"previsoes_novos_dados\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"status\"},\"Name\":\"previsoes_novos_dados.status\",\"NativeReferenceName\":\"status\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"}},\"Function\":1},\"Name\":\"Sum(previsoes_novos_dados.anomaly_score)\",\"NativeReferenceName\":\"Média do Score de Anomalia\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(previsoes_novos_dados.anomaly_score)\":{\"displayName\":\"Média do Score de Anomalia\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#A139A3'\"}}}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Média do Score de Anomalia Por Status'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 310.51,
+          "width": 597.97,
+          "x": 664.41,
+          "y": 409.49,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"74dbd9ab40ee2066cadb\",\"layouts\":[{\"id\":0,\"position\":{\"x\":663.0508474576271,\"y\":116.61016949152541,\"z\":0,\"width\":366.1016949152542,\"height\":273.89830508474574}}],\"singleVisual\":{\"visualType\":\"pieChart\",\"projections\":{\"Category\":[{\"queryRef\":\"previsoes_novos_dados.status\",\"active\":true}],\"Y\":[{\"queryRef\":\"CountNonNull(previsoes_novos_dados.id)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"previsoes_novos_dados\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"status\"},\"Name\":\"previsoes_novos_dados.status\",\"NativeReferenceName\":\"status\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"id\"}},\"Function\":5},\"Name\":\"CountNonNull(previsoes_novos_dados.id)\",\"NativeReferenceName\":\"Contagem de id\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"id\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":6,\"Percent\":0}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"previsoes_novos_dados\"}},\"Property\":\"status\"}},\"Right\":{\"Literal\":{\"Value\":\"'normal'\"}}}}}]}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":8,\"Percent\":-0.25}}}}}},\"selector\":{\"data\":[{\"scopeId\":{\"Comparison\":{\"ComparisonKind\":0,\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"previsoes_novos_dados\"}},\"Property\":\"status\"}},\"Right\":{\"Literal\":{\"Value\":\"'anomalia'\"}}}}}]}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total de Registros Por Status'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 273.90,
+          "width": 366.10,
+          "x": 663.05,
+          "y": 116.61,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"8787431467a80726210c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1029.1525423728813,\"y\":271.18644067796606,\"z\":5000,\"width\":233.22033898305082,\"height\":119.32203389830508}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Sum(previsoes_novos_dados.anomaly_score)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"previsoes_novos_dados\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"}},\"Function\":4},\"Name\":\"Sum(previsoes_novos_dados.anomaly_score)\",\"NativeReferenceName\":\"Máximo de anomaly_score\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"}},\"Function\":4}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Maior Score de Anomalia'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 119.32,
+          "width": 233.22,
+          "x": 1029.15,
+          "y": 271.19,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"ec6218a9a182734b660e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":66.44067796610169,\"y\":116.61016949152541,\"z\":2000,\"width\":587.1186440677966,\"height\":273.89830508474574}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"previsoes_novos_dados.anomaly_score\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(previsoes_novos_dados.anomaly_score)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"previsoes_novos_dados\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"},\"Name\":\"previsoes_novos_dados.anomaly_score\",\"NativeReferenceName\":\"anomaly_score\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"}},\"Function\":5},\"Name\":\"Sum(previsoes_novos_dados.anomaly_score)\",\"NativeReferenceName\":\"Contagem de anomaly_score\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"anomaly_score\"}},\"Function\":5}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"categoryAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"valueAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Total de Registros Por Score de Anomalia'\"}}},\"alignment\":{\"expr\":{\"Literal\":{\"Value\":\"'center'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 273.90,
+          "width": 587.12,
+          "x": 66.44,
+          "y": 116.61,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"efb73cbda6b0aebaa500\",\"layouts\":[{\"id\":0,\"position\":{\"x\":66.44067796610169,\"y\":0,\"z\":6000,\"width\":1195.9322033898304,\"height\":90.84745762711864}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Data Science Academy\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Corbel\",\"fontSize\":\"14pt\"}}],\"horizontalTextAlignment\":\"center\"},{\"textRuns\":[{\"value\":\"Microsoft Power BI Para Business Intelligence e Data Science\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Corbel\",\"fontSize\":\"14pt\"}}],\"horizontalTextAlignment\":\"center\"},{\"textRuns\":[{\"value\":\"Lab 8 - Detecção de Anomalias em Transações Financeiras com Linguagem R e Power BI\",\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"Corbel\",\"fontSize\":\"14pt\"}}],\"horizontalTextAlignment\":\"center\"}]}}]}}}",
+          "filters": "[]",
+          "height": 90.85,
+          "width": 1195.93,
+          "x": 66.44,
+          "y": 0.00,
+          "z": 6000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "AccessibleCityPark"
+}
