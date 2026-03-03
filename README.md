@@ -51,4 +51,11 @@ O repositório está organizado por secções, seguindo o cronograma do curso. C
 * **R:** Visualizações estatísticas personalizadas.
 * **Storytelling:** Design de dashboards focado na tomada de decisão.
 ---
-### Desenvolvido Por Mim 💻
+## 👩‍💻 Autora
+**Maria Eduarda Louzada**
+
+Estudante de Desenvolvimento de Software  
+
+---
+
+📌 *Repositório desenvolvido como parte de um curso da plataforma Data Science Academy.*
